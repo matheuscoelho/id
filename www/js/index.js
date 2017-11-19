@@ -34,7 +34,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         console.log('Received Device Ready Event');
-        console.log('calling setup push');
+        console.log('calling setup pushh');
 
         app.setupPush();
     },
@@ -71,7 +71,7 @@ var app = {
             listeningElement.setAttribute('style', 'display:none;');
             receivedElement.setAttribute('style', 'display:block;');
 
-            alert(data.registrationId);
+            document.getElementById("teste").value = 'deu: ' + data.registrationId;
         });
 
         push.on('error', function(e) {
