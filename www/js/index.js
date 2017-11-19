@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
- var app = {
+var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
@@ -40,17 +40,19 @@
     },
     setupPush: function() {
         console.log('calling push init');
-
         var push = PushNotification.init({
-            'android': {},
-            'ios': {
-                alert: "true",
-                badge: true,
-                sound: 'false'
+            "android": {
+                "senderID": "249880936399"
             },
-            'windows': {}
+            "browser": {},
+            "ios": {
+                "sound": true,
+                "vibration": true,
+                "badge": true
+            },
+            "windows": {}
         });
-
+        
         console.log('after init');
 
         push.on('registration', function(data) {
@@ -84,7 +86,7 @@
                 null,                 // callback
                 data.title,           // title
                 'Ok'                  // buttonName
-                );
-        });
+            );
+       });
     }
 };
