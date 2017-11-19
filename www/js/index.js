@@ -35,6 +35,7 @@ var app = {
     onDeviceReady: function() {
         console.log('Received Device Ready Event');
         console.log('calling setup push');
+
         app.setupPush();
     },
     setupPush: function() {
@@ -70,7 +71,7 @@ var app = {
             listeningElement.setAttribute('style', 'display:none;');
             receivedElement.setAttribute('style', 'display:block;');
 
-            receivedElement.value(data.registrationId);
+            alert(data.registrationId);
         });
 
         push.on('error', function(e) {
