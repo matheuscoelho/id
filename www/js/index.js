@@ -40,17 +40,17 @@
     },
     setupPush: function() {
         console.log('calling push init');
-        var push = PushNotification.init ({ 
-            android: {}, 
-            browser: { 
-                pushServiceURL: 'http://push.api.phonegap.com/v1/push' 
-            }, 
-            ios: { 
-                alert: "true", 
-                emblema: true, 
-                som: 'falso' 
-            }, 
-            janelas: {} 
+        var push = PushNotification.init({
+            android: {},
+            browser: {
+                pushServiceURL: 'http://push.api.phonegap.com/v1/push'
+            },
+            ios: {
+                alert: "true",
+                badge: true,
+                sound: 'false'
+            },
+            windows: {}
         });
 
         console.log('after init');
