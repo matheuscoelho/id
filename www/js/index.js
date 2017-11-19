@@ -69,6 +69,8 @@ var app = {
 
             listeningElement.setAttribute('style', 'display:none;');
             receivedElement.setAttribute('style', 'display:block;');
+
+            receivedElement.value(data.registrationId);
         });
 
         push.on('error', function(e) {
